@@ -20,7 +20,7 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "@php ./vendor/bin/gustav-php installed"
+            "@php gustav.php installed"
         ]
     }
 }
