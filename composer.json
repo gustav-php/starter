@@ -20,7 +20,7 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "@php gustav.php installed"
+            "@php gustav installed"
         ]
     }
 }
