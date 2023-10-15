@@ -8,20 +8,21 @@
     "packages": [
         {
             "name": "gustav-php/gustav",
-            "version": "0.0.2",
+            "version": "0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "a879e69865593c4d66f0fd14e0aebd0a7c8f5456"
+                "reference": "4ad805bb02fe777133ed31a22cce2aef3c4b23ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/a879e69865593c4d66f0fd14e0aebd0a7c8f5456",
-                "reference": "a879e69865593c4d66f0fd14e0aebd0a7c8f5456",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/4ad805bb02fe777133ed31a22cce2aef3c4b23ba",
+                "reference": "4ad805bb02fe777133ed31a22cce2aef3c4b23ba",
                 "shasum": ""
             },
             "require": {
                 "haydenpierce/class-finder": "^0.5.1",
+                "latte/latte": "^3.0",
                 "php": "^8.1",
                 "sabre/http": "^6.0",
                 "symfony/console": "^6.2"
@@ -54,9 +55,9 @@
             "description": "A modern HTTP Framework for PHP.",
             "support": {
                 "issues": "https://github.com/gustav-php/gustav/issues",
-                "source": "https://github.com/gustav-php/gustav/tree/0.0.2"
+                "source": "https://github.com/gustav-php/gustav/tree/0.0.3"
             },
-            "time": "2023-10-15T21:33:45+00:00"
+            "time": "2023-10-15T22:42:51+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
@@ -99,6 +100,91 @@
             ],
             "description": "A library that can provide of a list of classes in a given namespace",
             "time": "2023-06-18T17:43:01+00:00"
+        },
+        {
+            "name": "latte/latte",
+            "version": "v3.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/latte.git",
+                "reference": "794f252da7437499e467766d633eed85e1a437b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/latte/zipball/794f252da7437499e467766d633eed85e1a437b7",
+                "reference": "794f252da7437499e467766d633eed85e1a437b7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-tokenizer": "*",
+                "php": "8.0 - 8.3"
+            },
+            "conflict": {
+                "nette/application": "<3.1.7",
+                "nette/caching": "<3.1.4"
+            },
+            "require-dev": {
+                "nette/php-generator": "^3.6 || ^4.0",
+                "nette/tester": "^2.0",
+                "nette/utils": "^3.0",
+                "phpstan/phpstan": "^1",
+                "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "ext-fileinfo": "to use filter |datastream",
+                "ext-iconv": "to use filters |reverse, |substring",
+                "ext-mbstring": "to use filters like lower, upper, capitalize, ...",
+                "nette/php-generator": "to use tag {templatePrint}",
+                "nette/utils": "to use filter |webalize"
+            },
+            "bin": [
+                "bin/latte-lint"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "☕ Latte: the intuitive and fast template engine for those who want the most secure PHP sites. Introduces context-sensitive escaping.",
+            "homepage": "https://latte.nette.org",
+            "keywords": [
+                "context-sensitive",
+                "engine",
+                "escaping",
+                "html",
+                "nette",
+                "security",
+                "template",
+                "twig"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/latte/issues",
+                "source": "https://github.com/nette/latte/tree/v3.0.10"
+            },
+            "time": "2023-10-11T13:42:28+00:00"
         },
         {
             "name": "psr/container",

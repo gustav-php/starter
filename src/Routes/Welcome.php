@@ -5,11 +5,11 @@ namespace GustavPHP\Starter\Routes;
 use GustavPHP\Gustav\Attribute\Route;
 use GustavPHP\Gustav\Controller;
 
-class IndexController extends Controller\Base
+class Welcome extends Controller\Base
 {
     #[Route('/')]
     public function wizard()
     {
-        return $this->redirect('/wizard.html');
+        return $this->view(__DIR__ . '/../../views/index.latte', []);
     }
 }
