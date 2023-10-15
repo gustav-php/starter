@@ -1,0 +1,22 @@
+{
+    "name": "gustav-php/starter",
+    "description": "Starter project for Gustav PHP.",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "GustavPHP\\Starter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Torsten Dittmann",
+            "email": "torsten.dittmann@googlemail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "gustav-php/gustav": "dev-main"
+    },
+    "minimum-stability": "dev"
+}
