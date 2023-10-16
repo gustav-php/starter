@@ -1,13 +1,10 @@
 {layout 'layout.latte'}
-{block title}Welcome to GustavPHP{/block}
+{block title}About{/block}
 
 {block content}
-<div class="row">
-    <div class="col">
-        <h1>About</h1>
-    </div>
-</div>
-<div class="row">
-    <div class="col">This file is located under <code>/views/about.latte</code></div>
-</div>
+<ul>
+    <li>By default the layout includes <a href="https://htmx.org" target="_blank">HTMX</a> for some super powers</li>
+    <li>It also uses <a href="https://picocss.com" target="_blank">Pico.css</a> for CSS</li>
+    <li>Edit <code>/views/layout.latte</code> to remove what you don't need</li>
+</ul>
 {/block}
