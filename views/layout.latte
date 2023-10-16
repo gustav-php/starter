@@ -18,6 +18,16 @@
     </style>
 </head>
 
-<body>{block content}{/block}</body>
+<body>
+<div class="container text-center">
+    <nav class="nav">
+        <div class="nav-center">
+            <a href="/">Index</a>
+            <a href="/about">About</a>
+        </div>
+    </nav>
+    <main>{block content}{/block}</main>
+</div>
+</body>
 
 </html>

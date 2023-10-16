@@ -12,4 +12,9 @@ class Welcome extends Controller\Base
     {
         return $this->view(__DIR__ . '/../../views/index.latte', []);
     }
+    #[Route('/about')]
+    public function about()
+    {
+        return $this->view(__DIR__ . '/../../views/about.latte', []);
+    }
 }
