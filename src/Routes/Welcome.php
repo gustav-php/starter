@@ -7,7 +7,6 @@ use GustavPHP\Gustav\Attribute\{
     Route
 };
 use GustavPHP\Gustav\Controller;
-
 use GustavPHP\Starter\Middlewares\RequestLogger;
 
 #[Middleware(RequestLogger::class)]

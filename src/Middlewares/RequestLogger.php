@@ -3,9 +3,8 @@
 namespace GustavPHP\Starter\Middlewares;
 
 use GustavPHP\Gustav\Logger\Logger;
-use GustavPHP\Gustav\Message\RequestInterface;
-use GustavPHP\Gustav\Message\ResponseInterface;
 use GustavPHP\Gustav\Middleware\Base;
+use Psr\Http\Message\ServerRequestInterface;
 
 class RequestLogger extends Base
 {
@@ -13,8 +12,10 @@ class RequestLogger extends Base
     {
     }
 
-    public function handle(RequestInterface $request, ResponseInterface $response): void
+    public function handle(ServerRequestInterface $request): ServerRequestInterface
     {
-        Logger::log("[{$request->getMethod()}] {$request->getUrl()}");
+        Logger::log("[{$request->getMethod()}] {$request->getUri()}");
+
+        return $request;
     }
 }
