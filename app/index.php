@@ -18,6 +18,9 @@ $configuration = new Configuration(
     routeNamespaces: [
         'GustavPHP\Starter\Routes'
     ],
+    serviceNamespaces: [
+        'GustavPHP\Starter\Services'
+    ]
 );
 
 $app = new Application(configuration: $configuration);
