@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^8.1",
-        "gustav-php/gustav": "^0"
+        "gustav-php/gustav": "^0.0"
     },
     "scripts": {
         "post-create-project-cmd": [

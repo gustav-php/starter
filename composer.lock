@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4413e3e69a5d43231e8b06185e1165d",
+    "content-hash": "eb15a4e3326a26a2aa8ee86a3acc28df",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -111,16 +111,16 @@
         },
         {
             "name": "gustav-php/gustav",
-            "version": "0.0.9",
+            "version": "0.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "8f17d457cfcfb61d68835e24da71dc7b13f5a35c"
+                "reference": "8d9f3cc5d00351a7faeb7c54085ffc76cc7f14ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/8f17d457cfcfb61d68835e24da71dc7b13f5a35c",
-                "reference": "8f17d457cfcfb61d68835e24da71dc7b13f5a35c",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/8d9f3cc5d00351a7faeb7c54085ffc76cc7f14ab",
+                "reference": "8d9f3cc5d00351a7faeb7c54085ffc76cc7f14ab",
                 "shasum": ""
             },
             "require": {
@@ -158,9 +158,9 @@
             "description": "A modern HTTP Framework for PHP.",
             "support": {
                 "issues": "https://github.com/gustav-php/gustav/issues",
-                "source": "https://github.com/gustav-php/gustav/tree/0.0.9"
+                "source": "https://github.com/gustav-php/gustav/tree/0.0.10"
             },
-            "time": "2023-10-16T23:38:46+00:00"
+            "time": "2023-10-17T12:22:54+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
