@@ -111,16 +111,16 @@
         },
         {
             "name": "gustav-php/gustav",
-            "version": "0.0.14",
+            "version": "0.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "e0855fda3a581364b540dce0075e88fee5e7a804"
+                "reference": "dd4cce3b1c21e947748838023b3443106016cdca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/e0855fda3a581364b540dce0075e88fee5e7a804",
-                "reference": "e0855fda3a581364b540dce0075e88fee5e7a804",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/dd4cce3b1c21e947748838023b3443106016cdca",
+                "reference": "dd4cce3b1c21e947748838023b3443106016cdca",
                 "shasum": ""
             },
             "require": {
@@ -159,9 +159,9 @@
             "description": "A modern HTTP Framework for PHP.",
             "support": {
                 "issues": "https://github.com/gustav-php/gustav/issues",
-                "source": "https://github.com/gustav-php/gustav/tree/0.0.14"
+                "source": "https://github.com/gustav-php/gustav/tree/0.0.15"
             },
-            "time": "2023-10-17T22:24:20+00:00"
+            "time": "2023-10-17T23:52:39+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
