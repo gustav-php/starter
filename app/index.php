@@ -8,7 +8,9 @@ use GustavPHP\Gustav\Application;
 use GustavPHP\Gustav\Configuration;
 use GustavPHP\Gustav\Mode;
 
-$mode = $_ENV['MODE'] === 'production' ? Mode::Production : Mode::Development;
+$mode = \getenv('MODE') === 'production'
+    ? Mode::Production
+    : Mode::Development;
 
 $configuration = new Configuration(
     mode: $mode,
