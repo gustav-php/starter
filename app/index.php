@@ -17,14 +17,17 @@ $configuration = new Configuration(
     cache: __DIR__ . '/../cache/',
     files: __DIR__ . '/../public/',
     eventNamespaces: [
-        'GustavPHP\Starter\Events'
+        __NAMESPACE__ . '\Events'
     ],
     routeNamespaces: [
-        'GustavPHP\Starter\Routes'
+        __NAMESPACE__ . '\Routes'
     ],
     serviceNamespaces: [
-        'GustavPHP\Starter\Services'
-    ]
+        __NAMESPACE__ . '\Services'
+    ],
+    serializerNamespaces: [
+        __NAMESPACE__ . '\Serializers'
+    ],
 );
 
 $app = new Application(configuration: $configuration);
