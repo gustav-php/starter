@@ -111,22 +111,22 @@
         },
         {
             "name": "gustav-php/gustav",
-            "version": "0.0.20",
+            "version": "0.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "0a18f12e1a968fe5fc2a670188981c9c6ea3d22c"
+                "reference": "4526fb2e56c2978703da15677539cbac8fe522b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/0a18f12e1a968fe5fc2a670188981c9c6ea3d22c",
-                "reference": "0a18f12e1a968fe5fc2a670188981c9c6ea3d22c",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/4526fb2e56c2978703da15677539cbac8fe522b4",
+                "reference": "4526fb2e56c2978703da15677539cbac8fe522b4",
                 "shasum": ""
             },
             "require": {
                 "haydenpierce/class-finder": "^0.5.1",
                 "latte/latte": "^3.0",
-                "php": "^8.1",
+                "php": ">=8.1",
                 "php-di/php-di": "^7.0",
                 "react/http": "^1.9",
                 "symfony/console": "^6.2"
@@ -142,7 +142,6 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "GustavPHP\\Demo\\": "demo/",
                     "GustavPHP\\Gustav\\": "src/"
                 }
             },
@@ -157,11 +156,16 @@
                 }
             ],
             "description": "A modern HTTP Framework for PHP.",
+            "homepage": "https://gustav-php.github.io",
+            "keywords": [
+                "framework",
+                "gustav"
+            ],
             "support": {
                 "issues": "https://github.com/gustav-php/gustav/issues",
-                "source": "https://github.com/gustav-php/gustav/tree/0.0.20"
+                "source": "https://github.com/gustav-php/gustav"
             },
-            "time": "2023-10-22T19:00:38+00:00"
+            "time": "2023-10-22T19:24:21+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
