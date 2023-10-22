@@ -16,9 +16,14 @@
     ],
     "require": {
         "php": "^8.1",
-        "gustav-php/gustav": "^0.0"
+        "gustav-php/gustav": "^0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1"
     },
     "scripts": {
+        "lint": "./vendor/bin/pint --test --config vendor/gustav-php/gustav/pint.json src app",
+        "format": "./vendor/bin/pint --config vendor/gustav-php/gustav/pint.json src app",
         "post-create-project-cmd": [
             "@php gustav installed"
         ]

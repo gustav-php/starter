@@ -2,28 +2,20 @@
 
 namespace App\Routes;
 
+use App\Middlewares\Logger;
+use App\Services\Jokes;
 use DI\Attribute\Inject;
 use GustavPHP\Gustav\Attribute\{
     Middleware,
-    Query,
     Route
 };
 use GustavPHP\Gustav\Controller;
-use GustavPHP\Gustav\Router\Method;
-use App\Middlewares\Logger;
-use App\Services\Jokes;
 
 #[Middleware(Logger::class)]
 class Welcome extends Controller\Base
 {
     #[Inject]
     protected Jokes $jokes;
-
-    #[Route('/')]
-    public function welcome()
-    {
-        return $this->view(__DIR__ . '/../../views/index.latte');
-    }
 
     #[Route('/about')]
     public function about()
@@ -39,5 +31,11 @@ class Welcome extends Controller\Base
         return $this->view(__DIR__ . '/../../views/joke.latte', [
             'joke' => $joke
         ]);
+    }
+
+    #[Route('/')]
+    public function welcome()
+    {
+        return $this->view(__DIR__ . '/../../views/index.latte');
     }
 }

@@ -4,9 +4,7 @@ namespace App;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use GustavPHP\Gustav\Application;
-use GustavPHP\Gustav\Configuration;
-use GustavPHP\Gustav\Mode;
+use GustavPHP\Gustav\{Application, Configuration, Mode};
 
 $mode = \getenv('MODE') === 'production'
     ? Mode::Production
