@@ -7,6 +7,7 @@ RUN composer install
 
 FROM php:8.1-cli as final
 
+EXPOSE 4201
 ENV MODE=production
 WORKDIR /usr/src/app
 COPY . .
