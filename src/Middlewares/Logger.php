@@ -1,6 +1,6 @@
 <?php
 
-namespace GustavPHP\Starter\Middlewares;
+namespace App\Middlewares;
 
 use GustavPHP\Gustav\Middleware\Base;
 use Psr\Http\Message\ServerRequestInterface;

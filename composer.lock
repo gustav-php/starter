@@ -111,16 +111,16 @@
         },
         {
             "name": "gustav-php/gustav",
-            "version": "0.0.17",
+            "version": "0.0.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "5665e7db2bb2fd5dd72558dd7e4ee2e269941bfe"
+                "reference": "2d4a5e2663f64626d65a83618c0f647c4b128d57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/5665e7db2bb2fd5dd72558dd7e4ee2e269941bfe",
-                "reference": "5665e7db2bb2fd5dd72558dd7e4ee2e269941bfe",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/2d4a5e2663f64626d65a83618c0f647c4b128d57",
+                "reference": "2d4a5e2663f64626d65a83618c0f647c4b128d57",
                 "shasum": ""
             },
             "require": {
@@ -142,8 +142,8 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "GustavPHP\\Gustav\\": "src/",
-                    "GustavPHP\\Example\\": "example/"
+                    "GustavPHP\\Demo\\": "demo/",
+                    "GustavPHP\\Gustav\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -159,9 +159,9 @@
             "description": "A modern HTTP Framework for PHP.",
             "support": {
                 "issues": "https://github.com/gustav-php/gustav/issues",
-                "source": "https://github.com/gustav-php/gustav/tree/0.0.17"
+                "source": "https://github.com/gustav-php/gustav/tree/0.0.18"
             },
-            "time": "2023-10-21T20:46:22+00:00"
+            "time": "2023-10-22T02:55:21+00:00"
         },
         {
             "name": "haydenpierce/class-finder",

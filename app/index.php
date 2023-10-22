@@ -1,6 +1,6 @@
 <?php
 
-namespace GustavPHP\Starter;
+namespace App;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -14,20 +14,9 @@ $mode = \getenv('MODE') === 'production'
 
 $configuration = new Configuration(
     mode: $mode,
+    namespace: __NAMESPACE__,
     cache: __DIR__ . '/../cache/',
     files: __DIR__ . '/../public/',
-    eventNamespaces: [
-        __NAMESPACE__ . '\Events'
-    ],
-    routeNamespaces: [
-        __NAMESPACE__ . '\Routes'
-    ],
-    serviceNamespaces: [
-        __NAMESPACE__ . '\Services'
-    ],
-    serializerNamespaces: [
-        __NAMESPACE__ . '\Serializers'
-    ],
 );
 
 $app = new Application(configuration: $configuration);

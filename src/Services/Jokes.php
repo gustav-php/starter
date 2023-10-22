@@ -1,6 +1,6 @@
 <?php
 
-namespace GustavPHP\Starter\Services;
+namespace App\Services;
 
 use GustavPHP\Gustav\Service\Base;
 
