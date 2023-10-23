@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7b68078f1e7dcfd9518c5d97b44c4de",
+    "content-hash": "d72367d3fc49197d4c647cda6db2019a",
     "packages": [
         {
             "name": "evenement/evenement",
@@ -111,22 +111,22 @@
         },
         {
             "name": "gustav-php/gustav",
-            "version": "0.0.21",
+            "version": "0.0.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "4526fb2e56c2978703da15677539cbac8fe522b4"
+                "reference": "9b2411ab45c575db7de5c6347ead3289aae8c5e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/4526fb2e56c2978703da15677539cbac8fe522b4",
-                "reference": "4526fb2e56c2978703da15677539cbac8fe522b4",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/9b2411ab45c575db7de5c6347ead3289aae8c5e5",
+                "reference": "9b2411ab45c575db7de5c6347ead3289aae8c5e5",
                 "shasum": ""
             },
             "require": {
                 "haydenpierce/class-finder": "^0.5.1",
                 "latte/latte": "^3.0",
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "php-di/php-di": "^7.0",
                 "react/http": "^1.9",
                 "symfony/console": "^6.2"
@@ -165,7 +165,7 @@
                 "issues": "https://github.com/gustav-php/gustav/issues",
                 "source": "https://github.com/gustav-php/gustav"
             },
-            "time": "2023-10-22T19:24:21+00:00"
+            "time": "2023-10-23T23:29:11+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
@@ -1922,8 +1922,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.1"
+        "php": "^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
