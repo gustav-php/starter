@@ -5,11 +5,11 @@ COPY composer.json composer.json
 COPY composer.lock composer.lock
 RUN composer install
 
-FROM php:8.1-cli as final
+FROM php:8.3-cli as final
 
 EXPOSE 4201
 ENV MODE=production
 WORKDIR /usr/src/app
 COPY . .
 COPY --from=composer /usr/src/app/vendor vendor
-ENTRYPOINT ["php", "gustav", "serve"]
+ENTRYPOINT ["php", "gustav", "start"]

@@ -12,10 +12,10 @@ composer create-project gustav-php/starter example-app
 
 ## Usage
 
-After the project has been created, start GustavPHP's local development server using the serve command:
+After the project has been created, start GustavPHP's local development server using the `dev` command:
 
 ```bash
 cd example-app
 
-php gustav serve
+php gustav dev
 ```

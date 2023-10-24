@@ -111,16 +111,16 @@
         },
         {
             "name": "gustav-php/gustav",
-            "version": "0.0.24",
+            "version": "0.0.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "1e472bf6225c5319eda78b74fff2237809402f8f"
+                "reference": "b746c750a6a84dc5bcce9860fae7c5943de39629"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/1e472bf6225c5319eda78b74fff2237809402f8f",
-                "reference": "1e472bf6225c5319eda78b74fff2237809402f8f",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/b746c750a6a84dc5bcce9860fae7c5943de39629",
+                "reference": "b746c750a6a84dc5bcce9860fae7c5943de39629",
                 "shasum": ""
             },
             "require": {
@@ -129,7 +129,8 @@
                 "php": ">=8.2",
                 "php-di/php-di": "^7.0",
                 "react/http": "^1.9",
-                "symfony/console": "^6.2"
+                "symfony/console": "^6.2",
+                "symfony/process": "^6.3"
             },
             "require-dev": {
                 "laravel/pint": "^1.1",
@@ -165,7 +166,7 @@
                 "issues": "https://github.com/gustav-php/gustav/issues",
                 "source": "https://github.com/gustav-php/gustav"
             },
-            "time": "2023-10-24T00:31:02+00:00"
+            "time": "2023-10-24T01:56:50+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
@@ -1678,6 +1679,67 @@
                 }
             ],
             "time": "2023-07-28T09:04:16+00:00"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v6.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "0b5c29118f2e980d455d2e34a5659f4579847c54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/0b5c29118f2e980d455d2e34a5659f4579847c54",
+                "reference": "0b5c29118f2e980d455d2e34a5659f4579847c54",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Executes commands in sub-processes",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/process/tree/v6.3.4"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-08-07T10:39:22+00:00"
         },
         {
             "name": "symfony/service-contracts",

@@ -17,16 +17,16 @@ class Welcome extends Controller\Base
     #[Inject]
     protected Jokes $jokes;
 
-    #[Route('/api')]
-    public function api()
-    {
-        return $this->plaintext("Hello World!");
-    }
-
     #[Route('/about')]
     public function about()
     {
         return $this->view(__DIR__ . '/../../views/about.latte');
+    }
+
+    #[Route('/api')]
+    public function api()
+    {
+        return $this->plaintext("Hello World!");
     }
 
     #[Route('/joke')]
