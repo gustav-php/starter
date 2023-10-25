@@ -11,7 +11,7 @@ use GustavPHP\Gustav\Attribute\{
 };
 use GustavPHP\Gustav\Controller;
 
-#[Middleware(Logger::class)]
+#[Middleware(new Logger())]
 class Welcome extends Controller\Base
 {
     #[Inject]
