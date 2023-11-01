@@ -3,7 +3,7 @@ FROM composer:2.6 as composer
 WORKDIR /usr/src/app
 COPY composer.json composer.json
 COPY composer.lock composer.lock
-RUN composer install
+RUN composer install --ignore-platform-reqs --no-dev --optimize-autoloader
 
 FROM php:8.2-cli-alpine as final
 
