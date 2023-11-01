@@ -12,4 +12,5 @@ ENV MODE=production
 WORKDIR /usr/src/app
 COPY . .
 COPY --from=composer /usr/src/app/vendor vendor
+RUN ./vendor/bin/rr get-binary --no-config
 ENTRYPOINT ["php", "gustav", "start"]
