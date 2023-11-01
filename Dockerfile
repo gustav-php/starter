@@ -5,7 +5,7 @@ COPY composer.json composer.json
 COPY composer.lock composer.lock
 RUN composer install
 
-FROM php:8.3-cli as final
+FROM php:8.2-cli-alpine as final
 
 EXPOSE 4201
 ENV MODE=production
