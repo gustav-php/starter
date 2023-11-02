@@ -7,7 +7,7 @@ RUN composer install --ignore-platform-reqs --no-dev --optimize-autoloader
 
 FROM php:8.2-cli-alpine as final
 
-EXPOSE 4201
+EXPOSE 5173
 ENV MODE=production
 WORKDIR /usr/src/app
 COPY . .
