@@ -89,16 +89,16 @@
         },
         {
             "name": "gustav-php/gustav",
-            "version": "0.0.27",
+            "version": "0.0.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "a4c7a2ec005641b722c4597d767137197ff77c37"
+                "reference": "644d99bdaf1851ce3b8fca1261dff2f00f2547fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/a4c7a2ec005641b722c4597d767137197ff77c37",
-                "reference": "a4c7a2ec005641b722c4597d767137197ff77c37",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/644d99bdaf1851ce3b8fca1261dff2f00f2547fb",
+                "reference": "644d99bdaf1851ce3b8fca1261dff2f00f2547fb",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +147,7 @@
                 "issues": "https://github.com/gustav-php/gustav/issues",
                 "source": "https://github.com/gustav-php/gustav"
             },
-            "time": "2023-11-01T20:02:49+00:00"
+            "time": "2023-11-02T13:26:08+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
@@ -471,16 +471,16 @@
         },
         {
             "name": "php-di/php-di",
-            "version": "7.0.5",
+            "version": "7.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-DI/PHP-DI.git",
-                "reference": "9ea40a5a6970bf1ca5cbe148bc16cbad6ca3db6c"
+                "reference": "8097948a89f6ec782839b3e958432f427cac37fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI/PHP-DI/zipball/9ea40a5a6970bf1ca5cbe148bc16cbad6ca3db6c",
-                "reference": "9ea40a5a6970bf1ca5cbe148bc16cbad6ca3db6c",
+                "url": "https://api.github.com/repos/PHP-DI/PHP-DI/zipball/8097948a89f6ec782839b3e958432f427cac37fd",
+                "reference": "8097948a89f6ec782839b3e958432f427cac37fd",
                 "shasum": ""
             },
             "require": {
@@ -528,7 +528,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-DI/PHP-DI/issues",
-                "source": "https://github.com/PHP-DI/PHP-DI/tree/7.0.5"
+                "source": "https://github.com/PHP-DI/PHP-DI/tree/7.0.6"
             },
             "funding": [
                 {
@@ -540,7 +540,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-10T14:57:56+00:00"
+            "time": "2023-11-02T10:04:50+00:00"
         },
         {
             "name": "psr/container",
