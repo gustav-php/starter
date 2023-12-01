@@ -89,16 +89,16 @@
         },
         {
             "name": "gustav-php/gustav",
-            "version": "0.0.33",
+            "version": "0.0.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "f75efa2dd341f5e6875404d7cae3f8002ac38c66"
+                "reference": "55409b1bec19a0b3ee4db74049f7ef77c3d12baa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/f75efa2dd341f5e6875404d7cae3f8002ac38c66",
-                "reference": "f75efa2dd341f5e6875404d7cae3f8002ac38c66",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/55409b1bec19a0b3ee4db74049f7ef77c3d12baa",
+                "reference": "55409b1bec19a0b3ee4db74049f7ef77c3d12baa",
                 "shasum": ""
             },
             "require": {
@@ -148,7 +148,7 @@
                 "issues": "https://github.com/gustav-php/gustav/issues",
                 "source": "https://github.com/gustav-php/gustav"
             },
-            "time": "2023-12-01T15:14:02+00:00"
+            "time": "2023-12-01T16:13:43+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
