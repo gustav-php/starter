@@ -21,7 +21,6 @@ class Welcome extends Controller\Base
     #[Route('/about')]
     public function about()
     {
-        throw new Exception('asd');
         return $this->view('about.latte');
     }
 
