@@ -5,7 +5,6 @@ namespace App\Routes;
 use App\Middlewares\Logger;
 use App\Services\Jokes;
 use DI\Attribute\Inject;
-use Exception;
 use GustavPHP\Gustav\Attribute\{
     Middleware,
     Route
