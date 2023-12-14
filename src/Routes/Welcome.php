@@ -2,16 +2,13 @@
 
 namespace App\Routes;
 
-use App\Middlewares\Logger;
 use App\Services\Jokes;
 use DI\Attribute\Inject;
 use GustavPHP\Gustav\Attribute\{
-    Middleware,
     Route
 };
 use GustavPHP\Gustav\Controller;
 
-#[Middleware(new Logger())]
 class Welcome extends Controller\Base
 {
     #[Inject]
