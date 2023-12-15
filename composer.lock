@@ -89,16 +89,16 @@
         },
         {
             "name": "gustav-php/gustav",
-            "version": "0.0.36",
+            "version": "0.0.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "31266bf06cb34254e4fb5da0563ef6f7b3518184"
+                "reference": "83b0f869afa48f687f81c9c4cec21389f468d894"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/31266bf06cb34254e4fb5da0563ef6f7b3518184",
-                "reference": "31266bf06cb34254e4fb5da0563ef6f7b3518184",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/83b0f869afa48f687f81c9c4cec21389f468d894",
+                "reference": "83b0f869afa48f687f81c9c4cec21389f468d894",
                 "shasum": ""
             },
             "require": {
@@ -148,7 +148,7 @@
                 "issues": "https://github.com/gustav-php/gustav/issues",
                 "source": "https://github.com/gustav-php/gustav"
             },
-            "time": "2023-12-14T12:37:50+00:00"
+            "time": "2023-12-15T23:55:33+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
@@ -975,16 +975,16 @@
         },
         {
             "name": "spiral/roadrunner",
-            "version": "v2023.3.7",
+            "version": "v2023.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roadrunner-server/roadrunner.git",
-                "reference": "6c15487972f1d070025341472829471f3a604871"
+                "reference": "80eff8aa42c59bc2d2cc9a2fab4e02398fd94994"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roadrunner-server/roadrunner/zipball/6c15487972f1d070025341472829471f3a604871",
-                "reference": "6c15487972f1d070025341472829471f3a604871",
+                "url": "https://api.github.com/repos/roadrunner-server/roadrunner/zipball/80eff8aa42c59bc2d2cc9a2fab4e02398fd94994",
+                "reference": "80eff8aa42c59bc2d2cc9a2fab4e02398fd94994",
                 "shasum": ""
             },
             "type": "metapackage",
@@ -1013,7 +1013,7 @@
                 "docs": "https://roadrunner.dev/docs",
                 "forum": "https://forum.roadrunner.dev/",
                 "issues": "https://github.com/roadrunner-server/roadrunner/issues",
-                "source": "https://github.com/roadrunner-server/roadrunner/tree/v2023.3.7"
+                "source": "https://github.com/roadrunner-server/roadrunner/tree/v2023.3.8"
             },
             "funding": [
                 {
@@ -1021,7 +1021,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-30T19:08:45+00:00"
+            "time": "2023-12-14T15:48:20+00:00"
         },
         {
             "name": "spiral/roadrunner-cli",
