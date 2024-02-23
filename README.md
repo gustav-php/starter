@@ -1,5 +1,5 @@
 # Starter project
-
+s
 ## Installation
 
 Before creating your first GustavPHP project, you should ensure that your local machine has [PHP](https://www.php.net/) and [Composer](https://getcomposer.org/) installed.
