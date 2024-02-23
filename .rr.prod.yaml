@@ -6,6 +6,7 @@ logs:
 rpc:
   listen: tcp://127.0.0.1:6001
 
+
 server:
   command: "php app/index.php"
   env:
