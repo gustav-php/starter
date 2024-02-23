@@ -15,6 +15,7 @@ $configuration = new Configuration(
     namespace: __NAMESPACE__,
     cache: __DIR__ . '/../cache/',
     files: __DIR__ . '/../public/',
+    views: __DIR__ . '/../views/'
 );
 
 $app = new Application(configuration: $configuration);

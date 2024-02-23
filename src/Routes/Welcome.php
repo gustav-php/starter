@@ -2,16 +2,13 @@
 
 namespace App\Routes;
 
-use App\Middlewares\Logger;
 use App\Services\Jokes;
 use DI\Attribute\Inject;
 use GustavPHP\Gustav\Attribute\{
-    Middleware,
     Route
 };
 use GustavPHP\Gustav\Controller;
 
-#[Middleware(new Logger())]
 class Welcome extends Controller\Base
 {
     #[Inject]
@@ -20,7 +17,7 @@ class Welcome extends Controller\Base
     #[Route('/about')]
     public function about()
     {
-        return $this->view(__DIR__ . '/../../views/about.latte');
+        return $this->view('about.latte');
     }
 
     #[Route('/api')]
@@ -34,7 +31,7 @@ class Welcome extends Controller\Base
     {
         $joke = $this->jokes->jokes[array_rand($this->jokes->jokes)];
 
-        return $this->view(__DIR__ . '/../../views/joke.latte', [
+        return $this->view('joke.latte', [
             'joke' => $joke
         ]);
     }
@@ -42,6 +39,6 @@ class Welcome extends Controller\Base
     #[Route('/')]
     public function welcome()
     {
-        return $this->view(__DIR__ . '/../../views/index.latte');
+        return $this->view('index.latte');
     }
 }
