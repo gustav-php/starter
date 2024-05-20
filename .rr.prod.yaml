@@ -12,6 +12,6 @@ server:
     - MODE: "production"
 
 http:
-  address: 0.0.0.0:5173
+  address: 0.0.0.0:4301
   pool:
     num_workers: 0

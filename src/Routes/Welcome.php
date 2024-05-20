@@ -3,16 +3,14 @@
 namespace App\Routes;
 
 use App\Services\Jokes;
-use DI\Attribute\Inject;
-use GustavPHP\Gustav\Attribute\{
-    Route
-};
+use GustavPHP\Gustav\Attribute\{Route};
 use GustavPHP\Gustav\Controller;
 
 class Welcome extends Controller\Base
 {
-    #[Inject]
-    protected Jokes $jokes;
+    public function __construct(protected Jokes $jokes)
+    {
+    }
 
     #[Route('/about')]
     public function about()
@@ -23,7 +21,7 @@ class Welcome extends Controller\Base
     #[Route('/api')]
     public function api()
     {
-        return $this->plaintext("Hello World!");
+        return $this->plaintext('Hello World!');
     }
 
     #[Route('/joke')]
@@ -32,7 +30,7 @@ class Welcome extends Controller\Base
         $joke = $this->jokes->jokes[array_rand($this->jokes->jokes)];
 
         return $this->view('joke.latte', [
-            'joke' => $joke
+            'joke' => $joke,
         ]);
     }
 
