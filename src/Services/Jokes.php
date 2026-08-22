@@ -3,7 +3,9 @@
 namespace App\Services;
 
 use App\Contracts\JokeProvider;
+use GustavPHP\Gustav\Attribute\Service;
 
+#[Service(as: JokeProvider::class)]
 class Jokes implements JokeProvider
 {
     private const JOKES = [

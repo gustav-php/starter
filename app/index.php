@@ -4,8 +4,6 @@ namespace App;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use App\Contracts\JokeProvider;
-use App\Services\Jokes;
 use GustavPHP\Gustav\{Application, Configuration, Mode};
 
 $mode = \getenv('MODE') === 'production'
@@ -21,6 +19,5 @@ $configuration = new Configuration(
 );
 
 $app = new Application(configuration: $configuration);
-$app->services()->bind(JokeProvider::class, Jokes::class);
 
 $app->start();
