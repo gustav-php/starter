@@ -17,3 +17,7 @@ After the project has been created, start GustavPHP's local development server u
 ```bash
 php gustav dev
 ```
+
+The starter binds `JokeProvider` to its in-memory `Jokes` implementation in
+`app/index.php`. Use the same application service registry for database
+clients, repositories, and middleware dependencies.

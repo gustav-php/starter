@@ -2,40 +2,38 @@
 
 namespace App\Routes;
 
-use App\Services\Jokes;
-use GustavPHP\Gustav\Attribute\{Route};
+use App\Contracts\JokeProvider;
+use GustavPHP\Gustav\Attribute\Route;
 use GustavPHP\Gustav\Controller;
 
 class Welcome extends Controller\Base
 {
-    public function __construct(protected Jokes $jokes)
+    public function __construct(private readonly JokeProvider $jokes)
     {
     }
 
     #[Route('/about')]
-    public function about()
+    public function about(): Controller\Response
     {
         return $this->view('about.latte');
     }
 
     #[Route('/api')]
-    public function api()
+    public function api(): Controller\Response
     {
         return $this->plaintext('Hello World!');
     }
 
     #[Route('/joke')]
-    public function joke()
+    public function joke(): Controller\Response
     {
-        $joke = $this->jokes->jokes[array_rand($this->jokes->jokes)];
-
         return $this->view('joke.latte', [
-            'joke' => $joke,
+            'joke' => $this->jokes->random(),
         ]);
     }
 
     #[Route('/')]
-    public function welcome()
+    public function welcome(): Controller\Response
     {
         return $this->view('index.latte');
     }

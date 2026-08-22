@@ -2,11 +2,11 @@
 
 namespace App\Services;
 
-use GustavPHP\Gustav\Service\Base;
+use App\Contracts\JokeProvider;
 
-class Jokes extends Base
+class Jokes implements JokeProvider
 {
-    public array $jokes = [
+    private const JOKES = [
         'My wife told me to stop impersonating a flamingo. I had to put my foot down.',
         'I went to a seafood disco last week... and pulled a mussel.',
         'Do you know where you can get chicken broth in bulk? The stock market.',
@@ -17,4 +17,9 @@ class Jokes extends Base
         'I told my girlfriend she drew her eyebrows too high. She seemed surprised.',
         'I used to work in a shoe recycling shop. It was sole destroying.',
     ];
+
+    public function random(): string
+    {
+        return self::JOKES[array_rand(self::JOKES)];
+    }
 }
