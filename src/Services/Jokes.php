@@ -3,10 +3,12 @@
 namespace App\Services;
 
 use App\Contracts\JokeProvider;
+use App\Events\JokeTold;
 use GustavPHP\Gustav\Attribute\Service;
+use Psr\EventDispatcher\EventDispatcherInterface;
 
 #[Service(as: JokeProvider::class)]
-class Jokes implements JokeProvider
+final readonly class Jokes implements JokeProvider
 {
     private const JOKES = [
         'My wife told me to stop impersonating a flamingo. I had to put my foot down.',
@@ -20,8 +22,15 @@ class Jokes implements JokeProvider
         'I used to work in a shoe recycling shop. It was sole destroying.',
     ];
 
+    public function __construct(private EventDispatcherInterface $events)
+    {
+    }
+
     public function random(): string
     {
-        return self::JOKES[array_rand(self::JOKES)];
+        $joke = self::JOKES[array_rand(self::JOKES)];
+        $this->events->dispatch(new JokeTold($joke));
+
+        return $joke;
     }
 }

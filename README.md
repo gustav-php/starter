@@ -35,6 +35,10 @@ php gustav joke --uppercase
 Both the HTTP worker and `php gustav` load `app/bootstrap.php`, so project
 configuration has a single source of truth.
 
+`Jokes` also dispatches a typed `JokeTold` event through the injected PSR-14
+dispatcher. Gustav discovers the invokable `#[Listener]` class in `src/Events`
+and injects its logger without an event registry or static dispatch call.
+
 Safe local defaults live in `.env`. Put machine-specific overrides in the
 ignored `.env.local` file; real process environment variables take precedence
 over both. Typed configuration classes under `src/Config` can be injected into
