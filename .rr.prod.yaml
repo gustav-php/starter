@@ -1,7 +1,13 @@
 version: "3"
 
 logs:
+  mode: production
+  encoding: json
   level: info
+  channels:
+    server:
+      mode: raw
+      level: info
 
 rpc:
   listen: tcp://127.0.0.1:6001
