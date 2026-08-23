@@ -18,6 +18,9 @@ After the project has been created, start GustavPHP's local development server u
 php gustav dev
 ```
 
+The starter marks its in-memory `Jokes` implementation with
+`#[Service(as: JokeProvider::class)]`. Gustav discovers the binding, so the
+application entrypoint only constructs and starts the app.
 ## Production
 
 Start the production server with:
