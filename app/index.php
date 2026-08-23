@@ -4,9 +4,6 @@ namespace App;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use GustavPHP\Gustav\{Application, Configuration};
+use GustavPHP\Gustav\Application;
 
-Application::run(Configuration::forProject(
-    namespace: __NAMESPACE__,
-    root: dirname(__DIR__),
-));
+Application::run(require __DIR__ . '/bootstrap.php');
