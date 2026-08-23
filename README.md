@@ -19,8 +19,18 @@ php gustav dev
 ```
 
 The starter marks its in-memory `Jokes` implementation with
-`#[Service(as: JokeProvider::class)]`. Gustav discovers the binding, so the
-application entrypoint only constructs and starts the app.
+`#[Service(as: JokeProvider::class)]` and maps `APP_NAME` into the immutable
+`ApplicationConfig` class. Gustav discovers both, so the application entrypoint
+contains no service bindings or instance setup.
+
+Safe local defaults live in `.env`. Put machine-specific overrides in the
+ignored `.env.local` file; real process environment variables take precedence
+over both. Typed configuration classes under `src/Config` can be injected into
+controllers and services like any other dependency.
+
+Use deployment environment variables for production credentials. The included
+`.dockerignore` prevents a developer's `.env.local` from being copied into an
+image.
 ## Production
 
 Start the production server with:
