@@ -23,6 +23,18 @@ The starter marks its in-memory `Jokes` implementation with
 `ApplicationConfig` class. Gustav discovers both, so the application entrypoint
 contains no service bindings or instance setup.
 
+Application commands work the same way. Classes under `src/Commands` are
+discovered automatically and receive constructor dependencies from the service
+container. Try the included typed command:
+
+```bash
+php gustav joke --times=2
+php gustav joke --uppercase
+```
+
+Both the HTTP worker and `php gustav` load `app/bootstrap.php`, so project
+configuration has a single source of truth.
+
 Safe local defaults live in `.env`. Put machine-specific overrides in the
 ignored `.env.local` file; real process environment variables take precedence
 over both. Typed configuration classes under `src/Config` can be injected into
