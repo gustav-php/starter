@@ -1,0 +1,5 @@
+.git
+.env.local
+cache
+rr
+vendor

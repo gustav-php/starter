@@ -2,14 +2,17 @@
 
 namespace App\Routes;
 
+use App\Config\ApplicationConfig;
 use App\Contracts\JokeProvider;
 use GustavPHP\Gustav\Attribute\Route;
 use GustavPHP\Gustav\Controller;
 
 class Welcome extends Controller\Base
 {
-    public function __construct(private readonly JokeProvider $jokes)
-    {
+    public function __construct(
+        private readonly JokeProvider $jokes,
+        private readonly ApplicationConfig $configuration,
+    ) {
     }
 
     #[Route('/about')]
@@ -19,9 +22,12 @@ class Welcome extends Controller\Base
     }
 
     #[Route('/api')]
-    public function api(): Controller\Response
+    /** @return array{message:string} */
+    public function api(): array
     {
-        return $this->plaintext('Hello World!');
+        return [
+            'message' => "Hello from {$this->configuration->name}!",
+        ];
     }
 
     #[Route('/joke')]
