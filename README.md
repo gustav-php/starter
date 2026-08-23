@@ -21,3 +21,16 @@ php gustav dev
 The starter marks its in-memory `Jokes` implementation with
 `#[Service(as: JokeProvider::class)]`. Gustav discovers the binding, so the
 application entrypoint only constructs and starts the app.
+## Production
+
+Start the production server with:
+
+```bash
+php gustav start
+```
+
+The included `.rr.prod.yaml` keeps Gustav's newline-delimited JSON application
+logs intact on RoadRunner's `server` channel. Gustav reports every `5xx` once
+and includes the response's `X-Request-ID` in that record. Inject
+`Psr\Log\LoggerInterface` for application logs and
+`GustavPHP\Gustav\Http\RequestId` when they need request correlation.
