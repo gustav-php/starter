@@ -2,44 +2,34 @@
 
 namespace App\Routes;
 
-use App\Config\ApplicationConfig;
 use App\Contracts\JokeProvider;
-use GustavPHP\Gustav\Attribute\Route;
-use GustavPHP\Gustav\Controller;
+use GustavPHP\Gustav\Attribute\{Controller, Get};
+use GustavPHP\Gustav\Controller\{Base, Response};
 
-class Welcome extends Controller\Base
+#[Controller]
+final class Welcome extends Base
 {
     public function __construct(
         private readonly JokeProvider $jokes,
-        private readonly ApplicationConfig $configuration,
     ) {
     }
 
-    #[Route('/about')]
-    public function about(): Controller\Response
+    #[Get('/about', name: 'about')]
+    public function about(): Response
     {
         return $this->view('about.latte');
     }
 
-    #[Route('/api')]
-    /** @return array{message:string} */
-    public function api(): array
-    {
-        return [
-            'message' => "Hello from {$this->configuration->name}!",
-        ];
-    }
-
-    #[Route('/joke')]
-    public function joke(): Controller\Response
+    #[Get('/joke', name: 'joke')]
+    public function joke(): Response
     {
         return $this->view('joke.latte', [
             'joke' => $this->jokes->random(),
         ]);
     }
 
-    #[Route('/')]
-    public function welcome(): Controller\Response
+    #[Get(name: 'home')]
+    public function welcome(): Response
     {
         return $this->view('index.latte');
     }
