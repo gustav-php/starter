@@ -22,8 +22,8 @@
         "laravel/pint": "^1"
     },
     "scripts": {
-        "lint": "./vendor/bin/pint --test --config vendor/gustav-php/gustav/pint.json src app views",
-        "format": "./vendor/bin/pint --config vendor/gustav-php/gustav/pint.json src app views",
+        "lint": "./vendor/bin/pint --test --config vendor/gustav-php/gustav/pint.json src app",
+        "format": "./vendor/bin/pint --config vendor/gustav-php/gustav/pint.json src app",
         "setup": "@php ./vendor/bin/rr get-binary --no-config",
         "post-create-project-cmd": [
             "composer run setup",
