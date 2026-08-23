@@ -44,6 +44,11 @@ ignored `.env.local` file; real process environment variables take precedence
 over both. Typed configuration classes under `src/Config` can be injected into
 controllers and services like any other dependency.
 
+Controllers are discovered through `#[Controller]`. Use a class-level path
+prefix with concise `#[Get]`, `#[Post]`, and other HTTP method attributes. The
+included `Api` controller is a plain immutable class; extending
+`Controller\Base` is only useful when you want its view and response helpers.
+
 Use deployment environment variables for production credentials. The included
 `.dockerignore` prevents a developer's `.env.local` from being copied into an
 image.
