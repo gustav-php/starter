@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $view->escape($title) ?></title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1/css/pico.min.css">
+    <script src="https://unpkg.com/htmx.org@1"></script>
+</head>
+<body>
+<div>
+    <main class="container">
+        <nav hx-boost="true">
+            <ul>
+                <li><strong>GustavPHP</strong></li>
+            </ul>
+            <ul>
+                <li><a href="/">Index</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/joke">Joke</a></li>
+            </ul>
+        </nav>
+        <?= $view->section('content') ?>
+    </main>
+</div>
+</body>
+</html>

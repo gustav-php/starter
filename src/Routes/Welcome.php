@@ -4,10 +4,10 @@ namespace App\Routes;
 
 use App\Contracts\JokeProvider;
 use GustavPHP\Gustav\Attribute\{Controller, Get};
-use GustavPHP\Gustav\Controller\{Base, Response};
+use GustavPHP\Gustav\View;
 
 #[Controller]
-final class Welcome extends Base
+final readonly class Welcome
 {
     public function __construct(
         private readonly JokeProvider $jokes,
@@ -15,22 +15,22 @@ final class Welcome extends Base
     }
 
     #[Get('/about', name: 'about')]
-    public function about(): Response
+    public function about(): View
     {
-        return $this->view('about.latte');
+        return new View('about');
     }
 
     #[Get('/joke', name: 'joke')]
-    public function joke(): Response
+    public function joke(): View
     {
-        return $this->view('joke.latte', [
+        return new View('joke', [
             'joke' => $this->jokes->random(),
         ]);
     }
 
     #[Get(name: 'home')]
-    public function welcome(): Response
+    public function welcome(): View
     {
-        return $this->view('index.latte');
+        return new View('index');
     }
 }
