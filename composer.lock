@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "525ac6be73bf5c94a4b6c263ee383e0f",
+    "content-hash": "9cd061a7cd5f9d461fff7872adba02e3",
     "packages": [
         {
             "name": "composer/semver",
@@ -129,16 +129,16 @@
         },
         {
             "name": "gustav-php/gustav",
-            "version": "1.0.0-RC1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gustav-php/gustav.git",
-                "reference": "184011731da2eeba529a3011f70057744a285610"
+                "reference": "1badb4cbf96ccea507bab1ab77f32414965bbe39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/184011731da2eeba529a3011f70057744a285610",
-                "reference": "184011731da2eeba529a3011f70057744a285610",
+                "url": "https://api.github.com/repos/gustav-php/gustav/zipball/1badb4cbf96ccea507bab1ab77f32414965bbe39",
+                "reference": "1badb4cbf96ccea507bab1ab77f32414965bbe39",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +189,7 @@
                 "issues": "https://github.com/gustav-php/gustav/issues",
                 "source": "https://github.com/gustav-php/gustav"
             },
-            "time": "2026-08-24T13:11:43+00:00"
+            "time": "2026-08-24T14:12:11+00:00"
         },
         {
             "name": "haydenpierce/class-finder",
@@ -2888,9 +2888,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "gustav-php/gustav": 5
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
