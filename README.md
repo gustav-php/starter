@@ -1,47 +1,62 @@
-# Gustav starter
-
-The starter is a ready-to-run Gustav application with JSON and HTML endpoints,
-typed configuration, dependency injection, commands, events, native views, and
-session-backed CSRF protection.
+# Starter project
 
 ## Installation
 
-Install PHP 8.2 or newer and [Composer](https://getcomposer.org/), then create a
-project:
+Before creating your first GustavPHP project, you should ensure that your local machine has [PHP](https://www.php.net/) and [Composer](https://getcomposer.org/) installed.
+
+After you have installed PHP and Composer, you may create a new GustavPHP project via the `create-project` command:
 
 ```bash
-composer create-project gustav-php/starter example-app 39.0.0-RC1
-cd example-app
+composer create-project gustav-php/starter --ask
 ```
 
 ## Usage
 
-Start the development server:
+After the project has been created, start GustavPHP's local development server using the `dev` command:
 
 ```bash
 php gustav dev
 ```
 
-Open `http://localhost:4201` or try the included command:
+The starter marks its in-memory `Jokes` implementation with
+`#[Service(as: JokeProvider::class)]` and maps `APP_NAME` into the immutable
+`ApplicationConfig` class. Gustav discovers both, so the application entrypoint
+contains no service bindings or instance setup.
+
+Application commands work the same way. Classes under `src/Commands` are
+discovered automatically and receive constructor dependencies from the service
+container. Try the included typed command:
 
 ```bash
 php gustav joke --times=2
 php gustav joke --uppercase
 ```
 
-Useful example routes are:
+Both the HTTP worker and `php gustav` load `app/bootstrap.php`, so project
+configuration has a single source of truth.
 
-- `/api` for an inferred JSON response
-- `/joke` for an injected service and dispatched event
-- `/session` for sessions, flash data, and CSRF protection
+`Jokes` also dispatches a typed `JokeTold` event through the injected PSR-14
+dispatcher. Gustav discovers the invokable `#[Listener]` class in `src/Events`
+and injects its logger without an event registry or static dispatch call.
 
-Safe development defaults live in `.env`. Put machine-specific overrides in
-the ignored `.env.local` file; process environment variables take precedence.
+Safe local defaults live in `.env`. Put machine-specific overrides in the
+ignored `.env.local` file; real process environment variables take precedence
+over both. Typed configuration classes under `src/Config` can be injected into
+controllers and services like any other dependency.
+
+Controllers are discovered through `#[Controller]`. Use a class-level path
+prefix with concise `#[Get]`, `#[Post]`, and other HTTP method attributes. The
+included `Api` controller is a plain immutable class; extending
+`Controller\Base` is only useful when you want its view and response helpers.
+
+Conventional projects also get lazy server-side sessions in `storage/sessions`.
+Inject `GustavPHP\Gustav\Session` instead of configuring the application
+instance. The `/session` example demonstrates persistent values, one-request
+flash data, session invalidation, and a form protected with `#[Csrf]`.
 
 Use deployment environment variables for production credentials. The included
 `.dockerignore` prevents a developer's `.env.local` from being copied into an
 image.
-
 ## Production
 
 Start the production server with:
@@ -50,8 +65,8 @@ Start the production server with:
 php gustav start
 ```
 
-Review the production environment, session storage, and RoadRunner settings
-before deploying. Application logs are newline-delimited JSON and include the
-request ID for reported server failures.
-
-Read the full documentation at https://gustav-php.github.io.
+The included `.rr.prod.yaml` keeps Gustav's newline-delimited JSON application
+logs intact on RoadRunner's `server` channel. Gustav reports every `5xx` once
+and includes the response's `X-Request-ID` in that record. Inject
+`Psr\Log\LoggerInterface` for application logs and
+`GustavPHP\Gustav\Http\RequestId` when they need request correlation.

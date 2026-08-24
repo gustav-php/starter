@@ -19,25 +19,15 @@
         "gustav-php/gustav": "^1.0@RC"
     },
     "require-dev": {
-        "laravel/pint": "^1.30.4",
-        "nyholm/psr7": "^1.8"
+        "laravel/pint": "^1"
     },
     "scripts": {
-        "test": "@php tests/smoke.php",
-        "lint": "./vendor/bin/pint --test --config vendor/gustav-php/gustav/pint.json src app tests",
-        "format": "./vendor/bin/pint --config vendor/gustav-php/gustav/pint.json src app tests",
+        "lint": "./vendor/bin/pint --test --config vendor/gustav-php/gustav/pint.json src app",
+        "format": "./vendor/bin/pint --config vendor/gustav-php/gustav/pint.json src app",
         "setup": "@php ./vendor/bin/rr get-binary --no-config",
         "post-create-project-cmd": [
             "composer run setup",
             "@php gustav installed"
         ]
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true,
-        "platform": {
-            "php": "8.2.0"
-        }
     }
 }
