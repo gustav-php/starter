@@ -1,0 +1,12 @@
+<?php $view->layout('layout', ['title' => 'Sessions and CSRF']) ?>
+
+<?php if (is_string($notice)): ?>
+    <p><mark><?= $view->escape($notice) ?></mark></p>
+<?php endif ?>
+
+<p>This browser has loaded the page <strong><?= $view->escape((string) $visits) ?></strong> time(s).</p>
+
+<form method="post" action="/session/reset">
+    <input type="hidden" name="_token" value="<?= $view->escape($csrfToken) ?>">
+    <button type="submit">Reset session</button>
+</form>

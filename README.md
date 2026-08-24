@@ -49,6 +49,11 @@ prefix with concise `#[Get]`, `#[Post]`, and other HTTP method attributes. The
 included `Api` controller is a plain immutable class; extending
 `Controller\Base` is only useful when you want its view and response helpers.
 
+Conventional projects also get lazy server-side sessions in `storage/sessions`.
+Inject `GustavPHP\Gustav\Session` instead of configuring the application
+instance. The `/session` example demonstrates persistent values, one-request
+flash data, session invalidation, and a form protected with `#[Csrf]`.
+
 Use deployment environment variables for production credentials. The included
 `.dockerignore` prevents a developer's `.env.local` from being copied into an
 image.

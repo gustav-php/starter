@@ -1,5 +1,5 @@
 .git
 .env.local
-cache
+storage
 rr
 vendor
