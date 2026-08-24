@@ -19,7 +19,8 @@
         "gustav-php/gustav": "^1.0@RC"
     },
     "require-dev": {
-        "laravel/pint": "^1.30.4"
+        "laravel/pint": "^1.30.4",
+        "nyholm/psr7": "^1.8"
     },
     "scripts": {
         "test": "@php tests/smoke.php",

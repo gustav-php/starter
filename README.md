@@ -10,7 +10,7 @@ Install PHP 8.2 or newer and [Composer](https://getcomposer.org/), then create a
 project:
 
 ```bash
-composer create-project gustav-php/starter example-app
+composer create-project gustav-php/starter example-app 39.0.0-RC1
 cd example-app
 ```
 
